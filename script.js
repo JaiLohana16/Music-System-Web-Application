@@ -100,7 +100,15 @@ async function main() {
             playmusic(songs[index - 1].replace(".mp3", ""))
         }
     })
+    
+    
+    // eventlistener to autoplay next song when one finishes within one play list
+    currentsong.addEventListener('ended',function(){
+        let index = songs.indexOf(currentsong.src.split("/").slice(-1)[0])
+            playmusic(songs[index + 1].replace(".mp3", ""))
+      });
 
+    
     // Listen for Time Update event
     currentsong.addEventListener("timeupdate", () => {  // timeupdate is an event inbuilt 
         // console.log(currentsong.currentTime,currentsong.duration)
