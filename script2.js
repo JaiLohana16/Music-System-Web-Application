@@ -22,8 +22,7 @@ async function getsongs() {
     for (let index = 0; index < as.length; index++) {
         const element = as[index];
         if (element.href.endsWith(".mp3")) {
-            songs.push(element.href.split("/songs/")[1])  //splits into two parts one before the wrd songs and other after it and so we have then selected the second part using [1] 
-        }
+            songs.push(element.href.split("/songs/")[1])          }
 
     }
     return songs
@@ -33,7 +32,7 @@ const playmusic = (track) => {
     // let audio=new Audio("/Spotify Clone/songs/"+track+".mp3")
     currentsong.src = "/Spotify Clone/songs/" + track + ".mp3"
     currentsong.play()
-    play.src = "pause.svg" // when we target an element which has an id then we can target that directly like this
+    play.src = "pause.svg" 
     document.querySelector(".songinfo").innerHTML = decodeURI(track).replace(".mp3", " ")
     document.querySelector(".songtimer").innerHTML = `00:00/00:00`
 
@@ -41,10 +40,10 @@ const playmusic = (track) => {
 async function main() {
 
     songs = await getsongs()
-    // songs is defined as an global variable at the starting 
-    console.log(songs) // an array having names of songs only
+
+    console.log(songs) 
     let songul = document.querySelector(".songlist").getElementsByTagName("ul")[0]
-    // console.log(songul.innerHTML)
+ 
     songs.forEach(element => {
         songul.innerHTML = songul.innerHTML +
             `<li> 
@@ -55,8 +54,7 @@ async function main() {
                 <img src="playpause.svg" alt="" width="25px" class="invert">
                 </div>  
                 </li>`
-        // songul.innerhtml= songul.innerhtml is done so what that is doing is ke 2nd li laga raha hai 2nd turn main toh 1st wala apne jagha rakhna hai ote sirf last wala print hoga na so phele wala and then phele wala + new li added          
-    });
+            });
 
     // Eventlistener for each song
     Array.from(document.querySelector(".songlist").getElementsByTagName("li")).forEach(element => {
@@ -79,9 +77,8 @@ async function main() {
     })
 
     next.addEventListener("click", () => {
-        console.log(currentsong)//returns audio element <audio preload="auto" src="/Spotify Clone/songs/Raataan%20Lambiyan.mp3"> <audio>
+        console.log(currentsong)
         let index = songs.indexOf(currentsong.src.split("/").slice(-1)[0])
-        // http: , spotify clone , songs like this the src is splitted then we slice and take the last element which is song name.mp3 then it returns an array and [0] gives the name only which we want theennnnnn in the songs all that we have we ask that tell mus what is the index of this particular song from all the songs so suppose it tells it is 3 so we do index+1 and then play that song 
         console.log(index)
         console.log(songs.length)
         if (index + 1 < songs.length) {
@@ -98,7 +95,7 @@ async function main() {
 
     // Listen for Time Update event
     currentsong.addEventListener("timeupdate", () => {  // timeupdate is an event inbuilt 
-        // console.log(currentsong.currentTime,currentsong.duration)
+       
         document.querySelector(".songtimer").innerHTML = `${secondtominutes(currentsong.currentTime)}/${secondtominutes(currentsong.duration)}`
         document.querySelector(".circle").style.left = (currentsong.currentTime / currentsong.duration) * 100 + "%"
     })
@@ -107,15 +104,7 @@ async function main() {
         let percent = (e.offsetX / e.target.getBoundingClientRect().width) * 100
         document.querySelector(".circle").style.left = percent + "%"
         currentsong.currentTime = ((currentsong.duration) * percent) / 100
-        // lets suppose we click on seekbar on a place where e.offsetX is 100 and total width of target is 1000 suppose so percent =10 now that means that song 10% chala hai so mathematically if we think of a song that hsas total duration of 180seconds so we have clicked on seek bar over a place which takes to 10% and song then should be at 18 seconds so if we calculate that using currentsong.currentTime=(180*10)/100 will give 18 seconds which is also exactly 10% of 180 seconds //
-
-
-        // Also can make formula from above also
-        // document.querySelector(".circle").style.left=(currentsong.currentTime/currentsong.duration)*100 +"%"
-        // ALSO
-        // document.querySelector(".circle").style.left=percent+"%"
-        // so percent+"%"=(currentsong.currentTime/currentsong.duration)*100 +"%"
-        // so (perent*currentsong.duration)/100=currentsong.currentTime
+        
     })
     document.querySelector(".hamburger").addEventListener("click", () => {
         document.querySelector(".left").style.left = 0
@@ -127,7 +116,7 @@ async function main() {
     range.addEventListener("change", (e) => {
         // console.log(e)
         currentsong.volume = parseInt(e.target.value) / 100
-        // e.target.value will return from 0 to 100 depending on where we have put the seekbar of volume range and then /100 so then output will become between 0 to 1 range and the .volume is inbuilt method to control sound and its between 0 and 1
+      
     })
 }
 main()
