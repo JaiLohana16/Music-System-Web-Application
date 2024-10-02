@@ -1,7 +1,3 @@
-Here's a refined GitHub repository description for your project:
-
----
-
 # Music System Web Application 🎵
 
 This is a responsive web-based music system built using only **HTML**, **CSS**, and **JavaScript**. The system organizes songs into five categories: **Love**, **Dance**, **Punjabi**, **Devotional**, and **Happy**. 
