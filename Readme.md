@@ -16,11 +16,11 @@ This is a responsive web-based music system built using only **HTML**, **CSS**, 
 ### Home Page
 ![Home Page](HomePage.png)
 
-### Song Categories
-![Song Categories](path/to/categories-screenshot.png)
+### Responsive
+![Mobile View](Mobileview.png)
 
-### Playing a Song
-![Now Playing](path/to/now-playing-screenshot.png)
+### Library
+![Library](Library.png)
 
 ---
 
