@@ -8,9 +8,3 @@ This is a responsive web-based music system built using only **HTML**, **CSS**, 
 - **Two Script Versions:**
   - **script.js:** Full version supporting the folder-based song organization.
   - **script2.js:** A simpler version that directly fetches songs from the root folder without organizing them into subfolders.
-- **Optimized for FreeWebHostMost.com:** Adjustments have been made for deployment on FreeWebHostMost, where folder structure and file paths need slight modifications for compatibility.
-  
-## Deployment:
-This project is deployed on [FreeWebHostMost.com](https://musicsystemweb.freewebhostmost.com/), offering 125MB of free space. 
-
-Explore the live site: [Music System](https://musicsystemweb.freewebhostmost.com/)
