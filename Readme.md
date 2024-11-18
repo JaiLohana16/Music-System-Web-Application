@@ -14,7 +14,7 @@ This is a responsive web-based music system built using only **HTML**, **CSS**, 
 ## Preview 📸
 
 ### Home Page
-![Home Page](path/to/homepage-screenshot.png)
+![Home Page](HomePage.png)
 
 ### Song Categories
 ![Song Categories](path/to/categories-screenshot.png)
