@@ -8,3 +8,27 @@ This is a responsive web-based music system built using only **HTML**, **CSS**, 
 - **Two Script Versions:**
   - **script.js:** Full version supporting the folder-based song organization.
   - **script2.js:** A simpler version that directly fetches songs from the root folder without organizing them into subfolders.
+
+---
+
+## Preview 📸
+
+### Home Page
+![Home Page](path/to/homepage-screenshot.png)
+
+### Song Categories
+![Song Categories](path/to/categories-screenshot.png)
+
+### Playing a Song
+![Now Playing](path/to/now-playing-screenshot.png)
+
+---
+
+
+## Tech Stack
+- **HTML**: Structure and layout of the application.
+- **CSS**: Styling for a responsive and visually appealing design.
+- **JavaScript**: Handles interactivity and song management.
+
+---
+
